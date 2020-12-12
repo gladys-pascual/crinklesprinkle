@@ -1,0 +1,51 @@
+/* font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+body {
+  margin: 12px 3%;
+}
+/*********** Header  *************/
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 150px;
+}
+
+.logo a img {
+  width: 100%;
+}
+
+#nav-links {
+  display: flex;
+  align-items: center;
+}
+
+#nav-links li {
+  list-style-type: none;
+  margin: 4px;
+  padding: 16px;
+}
+
+#nav-links li a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown i {
+  font-size: 24px;
+}
+
+/* .dropdown-button{
+
+} */
