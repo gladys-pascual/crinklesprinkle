@@ -79,7 +79,7 @@ header {
 
 .crinkles-banner-image img {
   width: 100%;
-  opacity: 0.6;
+  opacity: 0.5;
   animation-name: banner-zoom;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -97,6 +97,8 @@ header {
   font-family: "Roboto", sans-serif;
   letter-spacing: 8px;
   text-transform: uppercase;
+  color: #3b3a3a;
+  margin: 20px;
 }
 
 .banner-text p {
@@ -166,6 +168,18 @@ header {
 }
 
 .description-image img {
+  width: 100%;
+}
+
+/*********** Gallery  *************/
+#gallery-photos {
+  clear: both;
+  line-height: 0;
+  column-count: 4;
+  column-gap: 0px;
+}
+
+#gallery-photos img {
   width: 100%;
 }
 
@@ -279,6 +293,10 @@ header {
   .description-image {
     width: 50vw;
   }
+  /*********** Gallery  *************/
+  #gallery-photos {
+    column-count: 3;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -341,15 +359,24 @@ header {
   .description-image {
     width: 70vw;
   }
+  /*********** Gallery  *************/
+  #gallery-photos {
+    column-count: 2;
+  }
 }
 
 @media screen and (max-width: 500px) {
+  /*********** Home  *************/
   .banner-text {
     width: 80vw;
   }
 
   .banner-text h1 {
     font-size: 1em;
+  }
+
+  .banner-text p {
+    display: none;
   }
 
   .description-text {
@@ -359,5 +386,9 @@ header {
 
   .description-image {
     width: 90vw;
+  }
+  /*********** Gallery  *************/
+  #gallery-photos {
+    column-count: 1;
   }
 }
