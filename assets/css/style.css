@@ -1,18 +1,22 @@
 /* font-family: 'Lato', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
-body {
-  margin: 12px 3%;
+* {
+  font-family: "Lato", sans-serif;
 }
+
+body {
+  margin: 0px;
+}
+
 /*********** Header  *************/
 /*logo and navigation links were placed in 
 the opposite sides of the page to create a modern look. */
 header {
   display: flex;
   justify-content: space-between;
+  margin: 12px 3%;
 }
-/*logo and navigation links were placed in 
-the opposite sides of the page to create a modern look. */
 
 .logo {
   width: 150px;
@@ -47,9 +51,6 @@ the opposite sides of the page to create a modern look. */
   font-size: 24px;
 }
 
-.dropdown {
-}
-
 .dropdown i {
   font-size: 24px;
 }
@@ -58,7 +59,92 @@ the opposite sides of the page to create a modern look. */
   display: none;
 }
 
+/*********** Footer  *************/
+.footer-wrapper {
+  height: 220px;
+  background-color: #ece4df;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#footer-logo {
+  width: 50px;
+}
+
+#footer-logo img {
+  width: 100%;
+  animation-name: footer-image;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes footer-image {
+  from {
+    transform: scale(1.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.footer-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  margin: 0;
+}
+
+.footer-links li {
+  list-style-type: none;
+  margin: 0px 16px;
+  padding: 5px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: black;
+  height: 44px;
+  width: 44px;
+  background-color: #fcf7f5;
+  border-radius: 50%;
+  margin: 0 2px;
+  text-align: center;
+  transition: all 0.5s ease;
+  padding: 4px 8px;
+}
+
+.footer-links li a:hover {
+  box-shadow: 0px 0px 20px black;
+}
+
+.copyright {
+  font-size: 8px;
+  margin-top: 20px;
+}
+
+/*********** Media queries  *************/
 @media screen and (max-width: 950px) {
+  /*********** Header  *************/
   .logo {
     width: 120px;
   }
@@ -69,6 +155,7 @@ the opposite sides of the page to create a modern look. */
 }
 
 @media screen and (max-width: 750px) {
+  /*********** Header  *************/
   .logo {
     width: 100px;
   }
