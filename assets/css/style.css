@@ -15,7 +15,7 @@ the opposite sides of the page to create a modern look. */
 header {
   display: flex;
   justify-content: space-between;
-  margin: 12px 3%;
+  margin-left: 3%;
 }
 
 .logo {
@@ -48,7 +48,7 @@ header {
   color: black;
   letter-spacing: 4px;
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .dropdown i {
@@ -59,11 +59,121 @@ header {
   display: none;
 }
 
+.active {
+  background-color: #ece4df;
+  padding: 8px 4px;
+  border-radius: 4px;
+}
+
+/*********** Home  *************/
+/* Banner */
+.crinkles-banner {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.crinkles-banner-image {
+  width: 100vw;
+}
+
+.crinkles-banner-image img {
+  width: 100%;
+  opacity: 0.6;
+  animation-name: banner-zoom;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-text h1 {
+  font-size: 4em;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.banner-text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+.banner-text button {
+  text-transform: uppercase;
+  border-color: #ece4df;
+  background-color: #ece4df;
+  padding: 12px;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+}
+
+.banner-text button a {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.banner-text button:hover {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0px 0px 20px black;
+}
+
+/* Crinkles description */
+
+.description-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  width: 60vw;
+}
+
+.description-wrapper .description h2 {
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.description-and-image {
+  display: flex;
+}
+
+.description-text-wrapper {
+  font-size: 16px;
+  line-height: 28px;
+  align-self: center;
+  margin-right: 20px;
+}
+
+.description-text {
+  width: 30vw;
+}
+
+.description-image {
+  width: 30vw;
+  align-self: center;
+}
+
+.description-image img {
+  width: 100%;
+}
+
 /*********** Footer  *************/
 .footer-wrapper {
   height: 220px;
   background-color: #ece4df;
-  margin: 0px;
+  margin: 10% 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -152,10 +262,31 @@ header {
   #nav-links li a {
     font-size: 16px;
   }
+  /*********** Home  *************/
+  .banner-text h1 {
+    font-size: 3em;
+  }
+
+  .description-and-image {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .description-text {
+    width: 50vw;
+  }
+
+  .description-image {
+    width: 50vw;
+  }
 }
 
 @media screen and (max-width: 750px) {
   /*********** Header  *************/
+  header {
+    margin: 0 3%;
+  }
+
   .logo {
     width: 100px;
   }
@@ -191,5 +322,42 @@ header {
 
   #nav-links li {
     padding: 8px;
+  }
+
+  /*********** Home  *************/
+  .banner-text h1 {
+    font-size: 2em;
+  }
+
+  .banner-text p {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+  }
+
+  .description-text {
+    width: 70vw;
+  }
+
+  .description-image {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .banner-text {
+    width: 80vw;
+  }
+
+  .banner-text h1 {
+    font-size: 1em;
+  }
+
+  .description-text {
+    width: 90vw;
+    text-align: center;
+  }
+
+  .description-image {
+    width: 90vw;
   }
 }
