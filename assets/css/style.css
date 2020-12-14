@@ -9,28 +9,7 @@ body {
   margin: 0px;
 }
 
-/*********** Header  *************/
-/*logo and navigation links were placed in 
-the opposite sides of the page to create a modern look. */
-header {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 3%;
-}
-
-.logo {
-  width: 150px;
-}
-
-.logo a img {
-  width: 100%;
-}
-
-.logo a img:hover {
-  animation-name: logo-bounce-animation;
-  animation-duration: 1s;
-}
-
+/********* Custom animations ******/
 @keyframes logo-bounce-animation {
   0% {
     -webkit-transform: scale(1);
@@ -57,6 +36,55 @@ header {
     -ms-transform: scale(1);
     transform: scale(1);
   }
+}
+
+@keyframes banner-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes banner-text-zoom {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes footer-image {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+/*********** Header  *************/
+/*logo and navigation links were placed in 
+the opposite sides of the page to create a modern look. */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3%;
+}
+
+.logo {
+  width: 150px;
+}
+
+.logo a img {
+  width: 100%;
+}
+
+.logo a img:hover {
+  animation-name: logo-bounce-animation;
+  animation-duration: 1s;
 }
 
 #nav-links,
@@ -94,7 +122,8 @@ header {
 
 .active {
   background-color: #ece4df;
-  padding: 8px 4px;
+  margin: 1px;
+  padding: 8px;
   border-radius: 4px;
 }
 
@@ -118,15 +147,6 @@ header {
   animation-fill-mode: forwards;
 }
 
-@keyframes banner-zoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
 .banner-text {
   position: absolute;
   top: 50%;
@@ -135,24 +155,14 @@ header {
 }
 
 .banner-text h1 {
-  font-size: 4em;
-  font-family: "Roboto", sans-serif;
+  font-size: 6em;
+  font-family: "Caveat", cursive;
   letter-spacing: 8px;
-  text-transform: uppercase;
   color: #3b3a3a;
   margin: 20px;
   animation-name: banner-text-zoom;
   animation-duration: 5s;
   animation-fill-mode: forwards;
-}
-
-@keyframes banner-text-zoom {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(1);
-  }
 }
 
 .banner-text p {
@@ -170,16 +180,17 @@ header {
 }
 
 .banner-text button a {
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   text-decoration: none;
   color: black;
 }
 
 .banner-text button:hover {
-  font-size: 16px;
-  text-decoration: none;
-  color: black;
   box-shadow: 0px 0px 20px black;
+  font-weight: 900;
+  background-color: #d3ccc8;
+  border-color: #d3ccc8;
 }
 
 /* Crinkles description */
@@ -237,9 +248,54 @@ header {
   width: 100%;
 }
 
+/*********** Our Crinkles  *************/
+.our-crinkles-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.our-crinkles {
+  width: 70vw;
+  margin-top: 40px;
+}
+
+.crinkles-wrapper {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.crinkles-img {
+  width: 30vw;
+}
+
+.crinkles-img img {
+  width: 100%;
+}
+
+.box-description {
+  width: 40vw;
+  margin: 28px;
+}
+
+.description-and-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery {
+  text-align: center;
+}
+
+.delivery i {
+  padding-right: 12px;
+}
+
+.delivery a {
+  color: black;
+}
 /*********** Footer  *************/
 .footer-wrapper {
-  height: 220px;
+  height: 250px;
   background-color: #ece4df;
   margin: 10% 0 0 0;
   display: flex;
@@ -267,15 +323,6 @@ header {
   animation-name: footer-image;
   animation-duration: 5s;
   animation-fill-mode: forwards;
-}
-
-@keyframes footer-image {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(2);
-  }
 }
 
 .footer-text {
@@ -309,6 +356,7 @@ header {
   text-align: center;
   transition: all 0.5s ease;
   padding: 4px 8px;
+  font-size: 28px;
 }
 
 .footer-links li a:hover {
@@ -316,7 +364,7 @@ header {
 }
 
 .copyright {
-  font-size: 8px;
+  font-size: 12px;
   margin-top: 20px;
 }
 
@@ -332,7 +380,7 @@ header {
   }
   /*********** Home  *************/
   .banner-text h1 {
-    font-size: 3em;
+    font-size: 4em;
   }
 
   .description-and-image {
@@ -350,6 +398,17 @@ header {
   /*********** Gallery  *************/
   #gallery-photos {
     column-count: 3;
+  }
+
+  /*********** Our Crinkles  *************/
+  .crinkles-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .crinkles-img,
+  .description {
+    width: 50vw;
   }
 }
 
@@ -398,7 +457,7 @@ header {
 
   /*********** Home  *************/
   .banner-text h1 {
-    font-size: 2em;
+    font-size: 3em;
   }
 
   .banner-text p {
@@ -426,7 +485,7 @@ header {
   }
 
   .banner-text h1 {
-    font-size: 1em;
+    font-size: 2em;
   }
 
   .banner-text p {
