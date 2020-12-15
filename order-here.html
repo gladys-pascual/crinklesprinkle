@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;&family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/09f25f8b57.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>crinkesprinkle</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="assets/images/crinklesprinkle-logo.png"
+            alt="crinkesprinkle logo"
+          />
+        </a>
+      </div>
+      <ul id="nav-links">
+        <div class="dropdown">
+          <button class="dropdown-button">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+          <div class="dropdown-content">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-crinkles.html">Our Crinkles</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="order-here.html" class="active">Order Here</a></li>
+          </div>
+        </div>
+      </ul>
+    </header>
+    <section class="order-crinkles-form-wrapper">
+      <form action="thank-you.html" class="order-crinkles-form">
+        <div>
+          <h1>
+            Order your crinkle cookies
+            <i class="fas fa-cookie-bite"> </i
+            ><i class="fas fa-cookie-bite"> </i>
+          </h1>
+          <div class="form-label-and-inputs">
+            <p class="label your-order">Your Order:</p>
+            <div>
+              <div>
+                <input
+                  type="radio"
+                  name="crinkle_choice"
+                  id="chocolate"
+                  value="chocolate"
+                  class="crinkle-choice"
+                  required
+                />
+                <label for="chocolate">Chocolate</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="crinkle_choice"
+                  id="ube"
+                  value="ube"
+                  class="crinkle-choice"
+                  required
+                />
+                <label for="ube">Ube</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="crinkle_choice"
+                  id="other"
+                  value="other"
+                  class="crinkle-choice"
+                  required
+                />
+                <label for="other">Other</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-label-and-inputs">
+            <label for="notes" class="label multiple-input">Order Notes:</label>
+            <textarea
+              name="notes"
+              id="notes"
+              class="form-inputs order-notes"
+              cols="30"
+              rows="4"
+              placeholder="This field is optional, but please fill this if you chose 'Other.'"
+            ></textarea>
+          </div>
+          <div class="form-label-and-inputs">
+            <label for="name" class="label">Name:</label>
+            <input
+              type="name"
+              name="name"
+              id="name"
+              required
+              class="form-inputs"
+              placeholder="Your name..."
+            />
+          </div>
+          <div class="form-label-and-inputs">
+            <label for="email" class="label">Email Address:</label>
+            <input
+              type="email"
+              name="email_address"
+              id="email"
+              required
+              class="form-inputs"
+              placeholder="Your email address..."
+            />
+          </div>
+          <div class="form-label-and-inputs">
+            <label for="phone" class="label">Mobile number:</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Your mobile number..."
+              required
+              class="form-inputs"
+            />
+          </div>
+          <div class="form-label-and-inputs">
+            <label for="address" class="label multiple-input"
+              >Delivery Address:</label
+            >
+            <div class="address-input">
+              <input
+                type="address"
+                name="address"
+                id="address"
+                required
+                class="form-inputs"
+                placeholder="Address Line 1 (required)"
+              />
+              <input
+                type="address"
+                name="address"
+                id="address"
+                class="form-inputs"
+                placeholder="Address Line 2 (optional)"
+              />
+              <input
+                type="address"
+                name="address"
+                id="address"
+                required
+                class="form-inputs"
+                placeholder="Eircode (required)"
+              />
+            </div>
+          </div>
+          <div class="order-crinkles-wrapper">
+            <input
+              type="submit"
+              value="Order your crinkles"
+              class="order-crinkles-button"
+            />
+          </div>
+        </div>
+      </form>
+    </section>
+    <footer class="footer-wrapper">
+      <div class="footer">
+        <div class="footer-logo-and-text">
+          <div class="footer-logo-wrapper">
+            <div id="footer-logo">
+              <img
+                src="assets/images/crinklesprinkle-logo.png"
+                alt="crinkesprinkle logo"
+              />
+            </div>
+          </div>
+          <p class="footer-text">crinklesprinkle</p>
+        </div>
+        <ul class="footer-links">
+          <li>
+            <a href="https://www.instagram.com/crinklesprinkle/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="mailto:crinklesprinkle@gmail.com" target="_blank"
+              ><i class="fas fa-envelope-square"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <p class="copyright">Copyright © 2020 crinklesprinkle</p>
+    </footer>
+  </body>
+</html>

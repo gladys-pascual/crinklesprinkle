@@ -9,7 +9,8 @@ body {
   margin: 0px;
 }
 
-/********* Custom animations ******/
+/*********** Reusable styles  *************/
+/* Custom animations */
 @keyframes logo-bounce-animation {
   0% {
     -webkit-transform: scale(1);
@@ -40,34 +41,80 @@ body {
 
 @keyframes banner-zoom {
   from {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
   to {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
 }
 
 @keyframes banner-text-zoom {
   from {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
   to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
 }
 
 @keyframes footer-image {
   from {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
   to {
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
     transform: scale(2);
   }
 }
 
+/*Heading styles */
+.description-and-price h3,
+.crinkles-count h3,
+.order-crinkles-form h1,
+.delivery h3,
+.cater h3 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/*Button styles*/
+.banner-text button,
+.order-crinkles-button {
+  text-transform: uppercase;
+  border-color: #ece4df;
+  background-color: #ece4df;
+  padding: 12px;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+}
+
+.banner-text button a {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.banner-text button:hover,
+.order-crinkles-button:hover {
+  box-shadow: 0px 0px 20px black;
+  font-weight: 900;
+  background-color: #d3ccc8;
+  border-color: #d3ccc8;
+}
+
 /*********** Header  *************/
-/*logo and navigation links were placed in 
-the opposite sides of the page to create a modern look. */
 header {
   display: flex;
   justify-content: space-between;
@@ -75,6 +122,7 @@ header {
 }
 
 .logo {
+  margin-top: 12px;
   width: 150px;
 }
 
@@ -174,29 +222,6 @@ header {
   font-size: 20px;
 }
 
-.banner-text button {
-  text-transform: uppercase;
-  border-color: #ece4df;
-  background-color: #ece4df;
-  padding: 12px;
-  border-radius: 4px;
-  transition: all 0.5s ease;
-}
-
-.banner-text button a {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  color: black;
-}
-
-.banner-text button:hover {
-  box-shadow: 0px 0px 20px black;
-  font-weight: 900;
-  background-color: #d3ccc8;
-  border-color: #d3ccc8;
-}
-
 /* Crinkles description */
 
 .description-wrapper {
@@ -278,7 +303,7 @@ header {
 
 .crinkles-img img {
   width: 100%;
-  border-radius: 70%;
+  border-radius: 50%;
   opacity: 0.8;
 }
 
@@ -309,35 +334,119 @@ header {
 
 .description-and-price h3,
 .crinkles-count h3 {
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-.description-and-price h3,
-.crinkles-count h3 {
   margin-bottom: 0;
 }
 
+.delivery-wrapper,
+.cater-wrapper {
+  display: flex;
+}
+
 .delivery {
+  margin-bottom: 80px;
+}
+
+.delivery,
+.cater {
   text-align: center;
 }
 
-.delivery i {
+.delivery i,
+.cater i {
   padding-right: 12px;
 }
 
-.delivery a {
+.delivery a,
+.cater a {
   color: black;
 }
 
-.delivery a:hover {
+.delivery a:hover,
+.cater a:hover {
   color: grey;
 }
 
-.delivery h3 {
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  line-height: 32px;
+/*********** Order Here  *************/
+.order-crinkles-form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.order-crinkles-form {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+
+.order-crinkles-form h1 {
+  text-align: center;
+  line-height: 2em;
+}
+
+.form-label-and-inputs {
+  display: flex;
+  align-items: center;
+  margin: 12px 0px;
+}
+
+.your-order {
+  align-self: flex-start;
+}
+
+.label {
+  width: 150px;
+  margin: 0 12px 0 0;
+  text-align: end;
+}
+
+.crinkle-choice {
+  margin-bottom: 12px;
+}
+
+#notes {
+  height: 60px;
+}
+
+.multiple-input {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.address-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-inputs {
+  width: 250px;
+  margin: 4px;
+  padding-left: 4px;
+  height: 24px;
+}
+/*Make input placeholder itatlic */
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+:-moz-placeholder {
+  font-style: italic;
+}
+::-moz-placeholder {
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+}
+/**/
+
+.your-order {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-crinkles-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 /*********** Footer  *************/
@@ -427,6 +536,10 @@ header {
   .box-description {
     width: 40vw;
   }
+  /*********** Order Here  *************/
+  .order-crinkles-form {
+    width: 60vw;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -471,8 +584,7 @@ header {
   }
 
   .crinkles-img,
-  .box-description,
-  .delivery {
+  .box-description {
     width: 50vw;
   }
 
@@ -480,6 +592,12 @@ header {
   .box-description-ube {
     margin-left: 0px;
     margin-right: 0px;
+  }
+  /*********** Order Here  *************/
+  .order-crinkles-form {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -552,11 +670,13 @@ header {
   /*********** Our Crinkles  *************/
   .crinkles-img,
   .box-description,
-  .delivery {
+  .delivery,
+  .cater {
     width: 65vw;
   }
 
-  .delivery h3 {
+  .delivery h3,
+  .cater h3 {
     font-size: 16px;
   }
 }
@@ -591,11 +711,28 @@ header {
   /*********** Our Crinkles  *************/
   .crinkles-img,
   .box-description,
-  .delivery {
+  .delivery,
+  .cater {
     width: 70vw;
   }
 
   .box-description h3 {
     font-size: 16px;
+  }
+  /*********** Order Here  *************/
+  .form-label-and-inputs {
+    flex-direction: column;
+  }
+
+  .label {
+    margin: 12px 0 8px 4px;
+    text-align: start;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 200px;
+  }
+
+  .form-label-and-inputs {
+    align-items: flex-start;
   }
 }
