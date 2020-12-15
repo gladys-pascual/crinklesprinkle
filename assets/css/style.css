@@ -449,6 +449,38 @@ header {
   justify-content: center;
 }
 
+/*********** Thank you  *************/
+.thank-you-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.thank-you {
+  width: 40vw;
+  text-align: center;
+}
+
+.thank-you p {
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 4px;
+  line-height: 1.5em;
+}
+
+.contactless-wrapper-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.contactless-wrapper {
+  width: 300px;
+}
+
+.contactless-wrapper img {
+  width: 100%;
+}
+
 /*********** Footer  *************/
 .footer-wrapper {
   height: 250px;
@@ -540,6 +572,10 @@ header {
   .order-crinkles-form {
     width: 60vw;
   }
+  /*********** Thank you  *************/
+  .thank-you {
+    width: 50vw;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -598,6 +634,13 @@ header {
     width: 70vw;
     display: flex;
     justify-content: center;
+  }
+  /*********** Thank you  *************/
+  .thank-you {
+    width: 60vw;
+  }
+  .thank-you p {
+    font-size: 1.3em;
   }
 }
 
@@ -679,6 +722,15 @@ header {
   .cater h3 {
     font-size: 16px;
   }
+
+  /*********** Thank you  *************/
+  .thank-you {
+    width: 70vw;
+  }
+
+  .thank-you p {
+    font-size: 1em;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -734,5 +786,9 @@ header {
 
   .form-label-and-inputs {
     align-items: flex-start;
+  }
+  /*********** Thank you  *************/
+  .thank-you {
+    width: 80vw;
   }
 }
