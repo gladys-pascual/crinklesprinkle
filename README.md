@@ -18,12 +18,13 @@ It is designed to be responsive and accessible on a range of devices, such as PC
 
 - ### User stories
   - As a potential customer, I want to learn about CrinkleSprinkle and determine what the business is about.
+  - As a potential or current customer, I want to be able to navigate different pages of the website both by desktop and mobile.
   - As a potential customer, I want to learn what crinkles are in order to determine whether this is something I would like to buy.
   - As a potential or current customer, I want to see a gallery of pictures that crinkles to see how it looks like.
   - As a potential or current customer, I want to know my options of buying from crinkle sprinkle such as the flavours available, its cost, where the crinkles can be delivered, and how to place an order.
   - As a potential or current customer, I want to know how I can contact the business.
   - As a potential or current customer, I want to be able to identify the crinklesprinkle tab when I have loads of tabs open on my browser so that I can go back to the website easily.
-  - As a potential or current customer, I want to be able to navigate different pages of the website both by desktop and mobile.
+  - As a potential or current customer, I want to be able to place my order.
 - ### Design
   - #### Colour Scheme
     - The main colour used was a grey hint of pink - #ece4df which gives a modern look on the website.
@@ -183,11 +184,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Media
 
-- The photos used in this site were obtained from ...
+- The photos used in this site were from the developer.
 
 ### Acknowledgements
-
-- I received inspiration for this project from X
 
 - Make placeholder italic and make sure it works in all browsers
   https://stackoverflow.com/questions/27644314/how-to-make-only-placeholder-italics-in-input
