@@ -393,12 +393,22 @@ header {
   justify-content: center;
   background-color: #ece4df;
   box-shadow: 0px 0px 10px grey;
+  padding: 0px 20px;
 }
 
-.order-crinkles-form h1 {
+.order-crinkle-title {
   text-align: center;
   line-height: 2em;
   font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.order-crinkle-title h1 {
+  width: 400px;
 }
 
 .form-label-and-inputs {
@@ -663,7 +673,7 @@ header {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   /*********** Header  *************/
   header {
     margin: 0 3% 40px 3%;
@@ -745,6 +755,10 @@ header {
     width: 75vw;
   }
 
+  .label {
+    width: 120px;
+  }
+
   /*********** Thank you  *************/
   .thank-you {
     width: 70vw;
@@ -803,21 +817,25 @@ header {
     padding: 20px;
   }
 
+  .order-crinkle-title h1 {
+    width: 80vw;
+  }
+
   .form-label-and-inputs {
     flex-direction: column;
   }
 
-  .label {
+  .label,
+  .your-order,
+  .multiple-input {
     margin: 12px 0 8px 4px;
-    text-align: start;
+    text-align: center;
     font-weight: 600;
     letter-spacing: 1px;
     width: 200px;
+    width: 80vw;
   }
 
-  .form-label-and-inputs {
-    align-items: flex-start;
-  }
   /*********** Thank you  *************/
   .thank-you {
     width: 80vw;

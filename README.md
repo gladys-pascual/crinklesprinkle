@@ -157,8 +157,9 @@ During testing, the following errors were found and were rectified:
 
   - When the page was first deployed, all the images did not appear. During the coding, I used a localhost port 5500 to see my page and all images were uploading fine. I used chrome developer tools to debug and figure out what was causing this error. The filepath for all the images were written incorrectly with an extra '/' at the beginning, causing the images to not load when deployed. This was rectified.
   - I used chrome developer tools extensively to ensure alignment was correct and to figure out the default margins or paddings that I was not initially aware of.
-  - Once deployed, the link was opened on my mobile phone. Two things were seen:
+  - Once deployed, the deployed link was tested on a mobile phone to ensure repsonsiveness. Note that Chrome Developer Tools with mobile view was used during development, but the deployed link was still tested in mobile view. Two things were seen:
     - Our Crinkles page: The price of chocolate crinkles is justified on the next line and justified on the left, which did not look correct. The style was changed for screen size at 500 px in media queries already created, using `justify-content: space-evenly'`.
+    - Order Here page: Some of the inputs were justified on the left, some on the center. This was fixed by justfying everything on center, making the page consistent.
 
 - Testing User Stories:
   1. As a potential customer, I want to learn about CrinkleSprinkle and determine what the business is about.
