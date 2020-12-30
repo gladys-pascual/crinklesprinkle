@@ -286,7 +286,7 @@ header {
 
 #gallery-photos img {
   width: 100%;
-  box-shadow: 0px 0px 20px black;
+  box-shadow: 4px 0px 20px black;
 }
 
 /*********** Our Crinkles  *************/
@@ -477,6 +477,9 @@ header {
 .thank-you {
   width: 40vw;
   text-align: center;
+  background-color: #ece4df;
+  box-shadow: 0px 0px 10px grey;
+  padding: 20px;
 }
 
 .thank-you p {
