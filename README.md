@@ -151,12 +151,14 @@ During testing, the following errors were found and were rectified:
 
   2. Initially, the "SEE OUR CRINKLES" link in the home section and the "ORDER YOUR CRINKLES" link in the order here section were written as `<button>`, with a link tag `<a>` inside. The validator gave an error where an element must not appear as a descendant of the button element, which is the case initially (`<a>` is a descendant of `<button>`) The `<button>` element was removed and the link tag `<a>` was styled to make it look like a button.
   3. In the `<form>` of "Order Here" section, an incorrect type for the input text boxes were initially used. This was rectified.
-  4. Warning on lack of headings on the gallery and thank-you section. This was rectified by adding `<h1>` with the title of the page, but putting the `class = "sr-only`, which has a style of display to none, used for the `<i>` tags for font awesome described in the accessibility section earlier.
+  4. Warning on lack of headings on the gallery and thank-you section. This was rectified by adding `<h1>` with the title of the page, but putting the `class = "sr-only"`, which has a style of display to none, used for the `<i>` tags for font awesome described in the accessibility section earlier.
 
 - Other general errors found during testing:
 
   - When the page was first deployed, all the images did not appear. During the coding, I used a localhost port 5500 to see my page and all images were uploading fine. I used chrome developer tools to debug and figure out what was causing this error. The filepath for all the images were written incorrectly with an extra '/' at the beginning, causing the images to not load when deployed. This was rectified.
   - I used chrome developer tools extensively to ensure alignment was correct and to figure out the default margins or paddings that I was not initially aware of.
+  - Once deployed, the link was opened on my mobile phone. Two things were seen:
+    - Our Crinkles page: The price of chocolate crinkles is justified on the next line and justified on the left, which did not look correct. The style was changed for screen size at 500 px in media queries already created, using `justify-content: space-evenly'`.
 
 - Testing User Stories:
   1. As a potential customer, I want to learn about CrinkleSprinkle and determine what the business is about.

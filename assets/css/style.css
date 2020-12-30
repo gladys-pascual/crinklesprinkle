@@ -653,6 +653,7 @@ header {
     display: flex;
     justify-content: center;
   }
+
   /*********** Thank you  *************/
   .thank-you {
     width: 60vw;
@@ -739,6 +740,11 @@ header {
     font-size: 16px;
   }
 
+  /*********** Order Here  *************/
+  .order-crinkles-form {
+    width: 75vw;
+  }
+
   /*********** Thank you  *************/
   .thank-you {
     width: 70vw;
@@ -787,7 +793,16 @@ header {
   .box-description h3 {
     font-size: 16px;
   }
+
+  .description-and-price {
+    justify-content: space-evenly;
+  }
   /*********** Order Here  *************/
+  .order-crinkles-form {
+    width: 80vw;
+    padding: 20px;
+  }
+
   .form-label-and-inputs {
     flex-direction: column;
   }
